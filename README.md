@@ -8,8 +8,8 @@ Xu-Wen Wang, Min Hyung Ryu, Michael H. Cho, Peter Castaldi, Craig P. Hersh, Edwi
 
 - [Overview](#overview)
 - [Repo Contents](#repo-contents)
-- [Data type for DKI](#Data-type-for-DKI)
-- [How the use the DKI framework](#How-the-use-the-DKI-framework)
+- [Data type for RFOnM](#Data-type-for-RFOnM)
+- [How the use the RFOnM framework](#How-the-use-the-DKI-framework)
 
 # Overview
 
@@ -22,7 +22,7 @@ Xu-Wen Wang, Min Hyung Ryu, Michael H. Cho, Peter Castaldi, Craig P. Hersh, Edwi
 (2) Python code to run RFOnM.
 
 
-# Data type for COP
+# Data type for RFOnM
 (1) graph.csv: adjacency matrix of PPI.
 
 (2) feature.csv: Z-transformed gene-wise p-values of each gene. Each column represents the p-values from a omics.
