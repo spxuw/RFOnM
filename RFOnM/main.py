@@ -122,7 +122,7 @@ def sa_task(H_value, discreated_action, num_nodes, external_field, row_indices, 
 
 def main():
     parser = argparse.ArgumentParser(description='RFOnM runner')
-    parser.add_argument('--max_iterations', type=int, default=300001, help='Maximum number of iterations')
+    parser.add_argument('--max_iterations', type=int, default=300000, help='Maximum number of iterations')
     parser.add_argument('--n_workers', type=int, default=4, help='Maximum number of workers')
     parser.add_argument('--adj_path', required=True, help='Path to adjacency matrix CSV')
     parser.add_argument('--feature_path', required=True, help='Path to node feature matrix CSV')
