@@ -18,8 +18,9 @@ pip install -e .
 </pre>pre>
 
 # Data type for RFOnM
+<pre>
 (1) graph.csv: adjacency matrix of PPI.
 
-(2) feature.csv: Z-transformed gene-wise p-values of each gene. Each column represents the p-values from a omics.
-
+(2) feature.csv: Z-transformed gene-wise p-values of each gene. Each column represents the p-values from an omics.
+</pre>pre>
 
