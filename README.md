@@ -17,7 +17,7 @@ cd RFOnM
 pip install -e .
 </pre>
 
-# Data type for RFOnM
+# Input data for RFOnM
 <pre>
 (1) graph.csv: adjacency matrix of PPI.
 
@@ -26,5 +26,14 @@ pip install -e .
 
 # Usage
 <pre>
-RFOnM --max_iterations 1000 --n_workers 2 --adj_path demo_graph.csv --feature_path demo_feature.csv --top_size 50 --bottom_size 10  --result_path . 
+RFOnM --max_iterations 1000 --n_workers 2 --adj_path demo_graph.csv --feature_path demo_feature.csv --top_size 50  --result_path . 
 </pre>
+
+# Parameters
+<pre>
+max_iterations: the number of iterations for simulated annealing algorithm.
+top_size and bottom_size: maximum and minimum module size for refining (500 and 1000 in manuscript).
+</pre>
+
+# Output
+Output is a one-column csv file indicating the ids of genes in disease module.
