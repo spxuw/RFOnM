@@ -6,20 +6,13 @@ Xu-Wen Wang, Min Hyung Ryu, Michael H. Cho, Peter Castaldi, Craig P. Hersh, Edwi
 
 ## Contents
 
-- [Overview](#overview)
-- [Repo Contents](#repo-contents)
+- [Installation](#Installation)
 - [Data type for RFOnM](#Data-type-for-RFOnM)
 - [How the use the RFOnM framework](#How-the-use-the-DKI-framework)
 
-# Overview
+# Installation
+git clone https://github.com/spxuw/RFOnM.git
 
-
-# Repo Contents
-(1) R codes to generated figures in paper.
-
-(2) R code to obtain gene-wise p-values of dataset from GEO.
-
-(2) Python code to run RFOnM.
 
 
 # Data type for RFOnM
