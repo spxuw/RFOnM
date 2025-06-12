@@ -11,9 +11,11 @@ Xu-Wen Wang, Min Hyung Ryu, Michael H. Cho, Peter Castaldi, Craig P. Hersh, Edwi
 - [How the use the RFOnM framework](#How-the-use-the-DKI-framework)
 
 # Installation
+<pre>
 git clone https://github.com/spxuw/RFOnM.git
-
-
+cd RFOnM
+pip install -e .
+<pre>
 
 # Data type for RFOnM
 (1) graph.csv: adjacency matrix of PPI.
