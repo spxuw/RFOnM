@@ -15,12 +15,16 @@ Xu-Wen Wang, Min Hyung Ryu, Michael H. Cho, Peter Castaldi, Craig P. Hersh, Edwi
 git clone https://github.com/spxuw/RFOnM.git
 cd RFOnM
 pip install -e .
-</pre>pre>
+</pre>
 
 # Data type for RFOnM
 <pre>
 (1) graph.csv: adjacency matrix of PPI.
 
 (2) feature.csv: Z-transformed gene-wise p-values of each gene. Each column represents the p-values from an omics.
-</pre>pre>
+</pre>
 
+# Usage
+<pre>
+RFOnM --max_iterations 1000 --n_workers 2 --adj_path demo_graph.csv --feature_path demo_feature.csv --top_size 50 --bottom_size 10  --result_path . 
+</pre>
