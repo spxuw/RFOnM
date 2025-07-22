@@ -127,7 +127,6 @@ def main():
     parser.add_argument('--adj_path', required=True, help='Path to adjacency matrix CSV')
     parser.add_argument('--feature_path', required=True, help='Path to node feature matrix CSV')
     parser.add_argument('--top_size', required=True, help='Top size of module')
-    parser.add_argument('--bottom_size', required=True, help='Bottom size of module')
     parser.add_argument('--result_path', required=True, help='Directory to save output CSV')
     args = parser.parse_args()
     run(
@@ -136,6 +135,5 @@ def main():
         adj_path=args.adj_path,
         feature_path=args.feature_path,
         top_size = args.top_size,
-        bottom_size = args.bottom_size,
         result_path=args.result_path
     )
