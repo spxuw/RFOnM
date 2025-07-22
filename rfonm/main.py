@@ -61,7 +61,7 @@ def postprocess_theta(theta, adj, gene_name_v1, gene_name_v2, upper_size, thres)
     return final_genes
 
 def run(max_iterations, n_workers, adj_path, feature_path, top_size, bottom_size, result_path):
-    discreated_action = np.linspace(0, 2 * np.pi, 10, endpoint=False)
+    discreated_action = np.linspace(-np.pi,np.pi,num=51)
 
     adj = np.loadtxt(adj_path, delimiter=',')
     num_nodes = adj.shape
@@ -89,7 +89,6 @@ def run(max_iterations, n_workers, adj_path, feature_path, top_size, bottom_size
         state_final = np.array(list(executor.map(sa_task_partial, HH)))
 
     theta = state_final  # from SA output
-    adj = np.loadtxt("demo_graph.csv", delimiter=',')
     upper_size = list(range(int(bottom_size), int(top_size) + 1, 10))
     thres = np.arange(0.85, 0.95, 0.1)
     
