@@ -58,6 +58,23 @@ def postprocess_theta(theta, adj, gene_name_v1, gene_name_v2, upper_size, thres)
         largest_component = max(components, key=len)
         final_genes = np.array(list(largest_component))
 
+    if verbose:
+        print("=== DEBUG SUMMARY ===")
+        print(f"theta shape: {theta.shape} (H x genes assumed)")
+        print(f"adj shape:   {adj.shape}")
+        print(f"target upper_size array: {upper_size}")
+        print(f"thres array: {thres}")
+        print("--- Grid search summary (aggregated) ---")
+        print(f"mean_zz (per upper): {mean_zz}")
+        print(f"max_thre (per upper): {max_thre}")
+        print(f"Selected optimal_size={optimal_size}, best_thre={best_thre}")
+        print(f"Counts at best_thre across H: min={counts.min()}, max={counts.max()}")
+        print(f"Selected Hc index={Hc} with counts[Hc]={counts[Hc]}")
+        print(f"Genes passing threshold before graph={disease_gene.size}")
+        print(f"Largest connected component size (final)={lcc_size}")
+        print("=== END DEBUG ===")
+    
+
     return final_genes
 
 def run(max_iterations, n_workers, adj_path, feature_path, top_size, bottom_size, result_path):
