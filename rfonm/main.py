@@ -70,7 +70,7 @@ def postprocess_theta(theta, adj, gene_name_v1, gene_name_v2, upper_size, thres)
     print(f"Counts at best_thre across H: min={counts.min()}, max={counts.max()}")
     print(f"Selected Hc index={Hc} with counts[Hc]={counts[Hc]}")
     print(f"Genes passing threshold before graph={disease_gene.size}")
-    print(f"Largest connected component size (final)={lcc_size}")
+    print(f"Largest connected component size (final)={final_genes.size}")
     print("=== END DEBUG ===")
     
 
