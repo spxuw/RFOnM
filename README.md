@@ -26,7 +26,7 @@ pip install -e .
 
 # Usage
 <pre>
-RFOnM --max_iterations 1000 --n_workers 2 --adj_path demo_graph.csv --feature_path demo_feature.csv --top_size 50  --result_path . 
+rfonm --max_iterations 1000 --n_workers 2 --adj_path ../data/graph_Alzheimer.csv --feature_path ../data/features_Alzheimer.csv --top_size 1000 --bottom_size 500 --result_path . 
 </pre>
 
 # Parameters
@@ -36,4 +36,4 @@ top_size and bottom_size: maximum and minimum module size for refining (500 and 
 </pre>
 
 # Output
-Output is a one-column csv file indicating the ids of genes in disease module.
+Outputa are a one-column csv file indicating the ids of genes in disease module and another file indicating the angle (theta) of each gene.
