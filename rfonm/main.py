@@ -142,8 +142,8 @@ def main():
     parser.add_argument('--n_workers', type=int, default=4, help='Maximum number of workers')
     parser.add_argument('--adj_path', required=True, help='Path to adjacency matrix CSV')
     parser.add_argument('--feature_path', required=True, help='Path to node feature matrix CSV')
-    parser.add_argument('--top_size', required=True, help='Top size of module')
-    parser.add_argument('--bottom_size', required=True, help='Bottom_size size of module')
+    parser.add_argument('--top_size', required=True, help='Top size to determine module')
+    parser.add_argument('--bottom_size', required=True, help='Bottom_size size to determine module')
     parser.add_argument('--result_path', required=True, help='Directory to save output CSV')
     args = parser.parse_args()
     run(
