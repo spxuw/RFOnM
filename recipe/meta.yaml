@@ -1,0 +1,44 @@
+# conda-recipe/meta.yaml
+{% set name = "rfonm" %}
+{% set version = "0.1" %}
+
+package:
+  name: {{ name|lower }}
+  version: {{ version }}
+
+source:
+  git_url: https://github.com/spxuw/RFOnM.git
+  git_rev: main
+
+build:
+  noarch: python
+  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
+
+requirements:
+  host:
+    - python >=3.8
+    - pip
+    - numpy >=1.26,<2.0
+  run:
+    - python >=3.8
+    - numpy >=1.26,<2.0
+    - networkx >=3.4,<4.0
+
+test:
+  # Automatically tests that the package can be imported.
+  imports:
+    - rfonm
+  commands:
+    - rfonm --help
+  requires:
+    - pip
+
+about:
+  home: https://github.com/spxuw/RFOnM
+  license: MIT
+  summary: "RFOnM for disease module detection"
+  author: "Xu-Wen Wang"
+
+extra:
+  recipe-maintainers:
+    - spxuw
