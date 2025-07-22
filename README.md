@@ -1,6 +1,6 @@
 # RFOnM (A statistical physics approach to integrating multi-omics data for disease module detection)
 
-This is a Pytorch and Sklearn implementation of COP, as described in our paper:
+This is a Python implementation of RFOnM, as described in our paper:
 
 Xu-Wen Wang, Min Hyung Ryu, Michael H. Cho, Peter Castaldi, Craig P. Hersh, Edwin K. Silverman, Yang-Yu Liu. [A statistical physics approach to integrating multi-omics data for disease module detection].
 
