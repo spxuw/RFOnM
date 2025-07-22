@@ -89,7 +89,7 @@ def run(max_iterations, n_workers, adj_path, feature_path, top_size, bottom_size
         state_final = np.array(list(executor.map(sa_task_partial, HH)))
 
     theta = state_final  # from SA output
-    upper_size = list(range(int(bottom_size), int(top_size) + 1, 10))
+    upper_size = list(range(int(bottom_size), int(top_size) + 1, 100))
     thres = np.arange(0.85, 0.95, 0.1)
     
     # Output
@@ -127,6 +127,7 @@ def main():
     parser.add_argument('--adj_path', required=True, help='Path to adjacency matrix CSV')
     parser.add_argument('--feature_path', required=True, help='Path to node feature matrix CSV')
     parser.add_argument('--top_size', required=True, help='Top size of module')
+    parser.add_argument('--bottom_size', required=True, help='Bottom_size size of module')
     parser.add_argument('--result_path', required=True, help='Directory to save output CSV')
     args = parser.parse_args()
     run(
@@ -135,5 +136,6 @@ def main():
         adj_path=args.adj_path,
         feature_path=args.feature_path,
         top_size = args.top_size,
+        bottom_size = args.bottom_size,
         result_path=args.result_path
     )
