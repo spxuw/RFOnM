@@ -106,7 +106,7 @@ def run(max_iterations, n_workers, adj_path, feature_path, top_size, bottom_size
 
     theta = state_final  # from SA output
     upper_size = list(range(int(bottom_size), int(top_size) + 1, 100))
-    thres = np.arange(0.85, 0.95, 0.1)
+    thres = np.linspace(0.85, 0.95, 11)
     
     # Output
     final_gene_indices = postprocess_theta(
