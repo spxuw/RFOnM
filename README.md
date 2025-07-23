@@ -12,9 +12,9 @@ Xu-Wen Wang, Min Hyung Ryu, Michael H. Cho, Peter Castaldi, Craig P. Hersh, Edwi
 
 # Installation
 <pre>
-git clone https://github.com/spxuw/RFOnM.git
-cd RFOnM
-pip install -e .
+  conda create -n rfonm python=3.12
+  conda activate test_rfonm
+  conda install -c xuwenwang rfonm
 </pre>
 
 # Input data for RFOnM
