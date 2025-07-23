@@ -24,6 +24,8 @@ Xu-Wen Wang, Min Hyung Ryu, Michael H. Cho, Peter Castaldi, Craig P. Hersh, Edwi
 (2) feature.csv: Z-transformed gene-wise p-values of each gene. Each column represents the p-values from an omics.
 </pre>
 
+Full dataset is hosted on [Dropbox](https://www.dropbox.com/s/xyz/data.zip?dl=1).
+
 # Usage
 <pre>
 rfonm --max_iterations 1000 --n_workers 2 --adj_path ../data/graph_Alzheimer.csv --feature_path ../data/features_Alzheimer.csv --top_size 1000 --bottom_size 500 --result_path . 
