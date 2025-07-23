@@ -24,13 +24,14 @@ Xu-Wen Wang, Min Hyung Ryu, Michael H. Cho, Peter Castaldi, Craig P. Hersh, Edwi
 (2) feature.csv: Z-transformed gene-wise p-values of each gene. Each column represents the p-values from an omics.
 </pre>
 
-Full dataset is hosted on [Dropbox](https://www.dropbox.com/s/xyz/data.zip?dl=1).
+Full dataset can be downloaded from [Dropbox](https://www.dropbox.com/scl/fo/oha0igt23h15bw5ddhu06/AOAODCkDfPjQrX5epIfKVCM?rlkey=6op1kp30qedd54eg3jrvucax4&dl=0).
 
 # Usage
 <pre>
 rfonm --max_iterations 1000 --n_workers 2 --adj_path ../data/graph_Alzheimer.csv --feature_path ../data/features_Alzheimer.csv --top_size 1000 --bottom_size 500 --result_path . 
 </pre>
 
+Results of RFOnM and other methods can be downloaded from [Dropbox](https://www.dropbox.com/scl/fo/6pedlejdl9m2q6pqk8gjj/APeqlZ96admY6uisHKcJjS8?rlkey=dxix574m844widitj8ixkgi8l&dl=0)
 # Parameters
 <pre>
 max_iterations: the number of iterations for simulated annealing algorithm.
