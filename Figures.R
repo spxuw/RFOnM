@@ -121,16 +121,16 @@ for (disease in c('Asthma','Alzheimer','COPD','Diabetes', 'GS-BRCA', 'GS-COAD', 
   results <- rbind(results, data.frame(Dataset = disease, Method = "ROBUST (GWAS)", ZScore = (LCC_i$Z)))
   
   LCC_i = LCC_Significance(N=1000,Targets =  paste("V",diease_DOMINO0,sep = ""),G=G)
-  results <- rbind(results, data.frame(Dataset = disease, Method = "DOMINO (GWAS)", ZScore = (LCC_i$Z)))
-  
-  LCC_i = LCC_Significance(N=1000,Targets =  paste("V",diease_DOMINO1,sep = ""),G=G)
   results <- rbind(results, data.frame(Dataset = disease, Method = "DOMINO (expression)", ZScore = (LCC_i$Z)))
   
+  LCC_i = LCC_Significance(N=1000,Targets =  paste("V",diease_DOMINO1,sep = ""),G=G)
+  results <- rbind(results, data.frame(Dataset = disease, Method = "DOMINO (GWAS)", ZScore = (LCC_i$Z)))
+  
   LCC_i = LCC_Significance(N=1000,Targets =  paste("V",diease_diamond0,sep = ""),G=G)
-  results <- rbind(results, data.frame(Dataset = disease, Method = "DIAMonD (GWAS)", ZScore = (LCC_i$Z)))
+  results <- rbind(results, data.frame(Dataset = disease, Method = "DIAMonD (expression)", ZScore = (LCC_i$Z)))
   
   LCC_i = LCC_Significance(N=1000,Targets =  paste("V",diease_diamond1,sep = ""),G=G)
-  results <- rbind(results, data.frame(Dataset = disease, Method = "DIAMonD (expression)", ZScore = (LCC_i$Z)))
+  results <- rbind(results, data.frame(Dataset = disease, Method = "DIAMonD (GWAS)", ZScore = (LCC_i$Z)))
   
 }
 
