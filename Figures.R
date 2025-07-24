@@ -7,7 +7,7 @@ library(NetSci)
 rm(list = ls())
 
 setwd("path_for_code")
-thres = c(0.85,0.86,0.87,0.88,0.89,0.90,0.91,0.92,0.93,0.94,0.95)
+thres = c(0.85,0.86,0.87,0.88,0.89,0.91,0.92,0.93,0.94,0.95)
 upper_size = c(500,600,700,800,900,1000)
 
 results <- data.frame()
