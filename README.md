@@ -31,7 +31,7 @@ Full dataset can be downloaded from [Dropbox](https://www.dropbox.com/scl/fo/oha
 rfonm --max_iterations 1000 --n_workers 2 --adj_path ../data/graph_Alzheimer.csv --feature_path ../data/features_Alzheimer.csv --top_size 1000 --bottom_size 500 --result_path . 
 </pre>
 
-Results of RFOnM and other methods can be downloaded from [Dropbox](https://www.dropbox.com/scl/fo/6pedlejdl9m2q6pqk8gjj/APeqlZ96admY6uisHKcJjS8?rlkey=dxix574m844widitj8ixkgi8l&dl=1)
+Results of RFOnM and other methods can be downloaded from [Dropbox](https://www.dropbox.com/scl/fo/6pedlejdl9m2q6pqk8gjj/APeqlZ96admY6uisHKcJjS8?rlkey=dxix574m844widitj8ixkgi8l&dl=1).
 # Parameters
 <pre>
 max_iterations: the number of iterations for simulated annealing algorithm.
