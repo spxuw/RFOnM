@@ -319,7 +319,7 @@ for (disease in c('Asthma','Alzheimer','COPD','Diabetes', 'GS-BRCA', 'GS-COAD', 
 
   
   distance_1 = c(distance_1,observed_dist1)
-  meth = c(meth,rep("RFOnM (with)",sum(disease_gene%in%disgnet$symbol)))
+  meth = c(meth,rep("RFOnM",sum(disease_gene%in%disgnet$symbol)))
   diseases_all = c(diseases_all,rep(disease,sum(disease_gene%in%disgnet$symbol)))
   
   distance_1 = c(distance_1,observed_dist2)
@@ -358,7 +358,7 @@ for (disease in c('Asthma','Alzheimer','COPD','Diabetes', 'GS-BRCA', 'GS-COAD', 
   index = index + 1
 }
 
-dat1 = data.frame(Acccuracy = distance_1, method = rep(c("RFOnM","Expression","GWAS","ROBUST (expression)","ROBUST (GWAS)",
+dat1 = data.frame(Distance = distance_1, method = rep(c("RFOnM","Expression","GWAS","ROBUST (expression)","ROBUST (GWAS)",
                                                 "DIAMonD (expression)","DIAMonD (GWAS)","DOMINO (expression)","DOMINO (GWAS)"),12),
                   dataset = rep(c("Asthma","Alzheimer","COPD","Diabetes","GS-BRCA","GS-COAD","GS-GBM","GS-LGG","GS-OV","C9","MAPT","GRN"),each=9)) 
 
@@ -368,7 +368,7 @@ dat1$method = factor(dat1$method,levels = c("RFOnM","Expression","GWAS","ROBUST 
 dat1$dataset = factor(dat1$dataset,levels = c("Asthma","Alzheimer","COPD","Diabetes","GS-BRCA","GS-COAD","GS-GBM","GS-LGG","GS-OV","C9","MAPT","GRN"))
 
 
-g2 = ggplot(data = dat1,aes(method,Acccuracy,color=method))+geom_point(size=3)+
+g2 = ggplot(data = dat1,aes(method,Distance,color=method))+geom_point(size=3)+
   scale_color_manual(values = c("#5E81ACFF","#8FA87AFF", "#BF616AFF", "#E7D202FF", "#7D5329FF", "#F49538FF", "#66CDAAFF", "#D070B9FF", "#98FB98FF", "#FCA3B7FF"))+
   theme_bw()+xlab("")+ylab("Distance")+facet_wrap(~dataset,scales = "free",nrow=2)+
   theme(panel.grid.major = element_blank(),
